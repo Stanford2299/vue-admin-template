@@ -31,6 +31,7 @@ import Layout from '@/layout'
  * all roles can be accessed
  */
 export const constantRoutes = [
+
   {
     path: '/login',
     component: () => import('@/views/login/index'),
@@ -51,8 +52,22 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: '辽宁城市地质', icon: 'dashboard' }
     }]
+  },
+
+  {
+    path: '/manager',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'manager',
+        component: () => import('@/views/manager/index'),
+        meta: { title: '管理', icon: 'form' }
+      }
+    ]
+
   },
 
   {
@@ -73,6 +88,13 @@ export const constantRoutes = [
         name: 'Tree',
         component: () => import('@/views/tree/index'),
         meta: { title: 'Tree', icon: 'tree' }
+      },
+      {
+        path: 'table2',
+        name: 'Table2',
+        component: () => import('@/views/table2/index'),
+        meta: { title: 'Tree2', icon: 'nested' }
+
       }
     ]
   },
