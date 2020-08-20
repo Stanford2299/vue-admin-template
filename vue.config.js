@@ -23,9 +23,7 @@ module.exports = {
    * then publicPath should be set to "/bar/".
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
-   *
    */
-
   publicPath: '/',
   outputDir: 'dist',
   assetsDir: 'static',
@@ -43,7 +41,6 @@ module.exports = {
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
     // it can be accessed in index.html to inject the correct title.
-    devtool: 'source-map',
     name: name,
     resolve: {
       alias: {
